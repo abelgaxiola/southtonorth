@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Citizenship</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script src="scripts/angular.min.js"></script>
+    <link href="content/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/styles.css" rel="stylesheet" />
+</head>
+<body ng-app="FlashCards">
+    <div class="section" ng-controller="CitizenshipController">
+        <div class="row center-block">
+            <div class="col-lg-12 col-md-12">
+                <section ng-hide="started">
+                    <header class="page-header hidden-xs">
+                        <h1 class="h1 text-center">Citizenship Questions</h1>
+                        <h1 class="h1 text-center">Preguntas Para La Ciudadania</h1>
+                    </header>
+                    <div class="well well-sm">
+                        <h2 class="h2 text-center">Instructions - Instrucciones</h2>
+                        <p class="text-info">The 100 civics (history and government) questions and answers for the naturalization test are all included in this website. The civics test is an oral test and the USCIS Officer will ask the applicant up to 10 of the 100 civics questions.</p>
+                        <p class="text-info">A continuación encontrara las 100 preguntas y respuestas de educación cívica (historia y gobierno) del Examen de Naturalización. El examen de educación cívica es un examen oral durante el cual el oficial de USCIS le hará 10 de estas 100 preguntas.</p>
+                        <p class="text-info">The green button will change the language (Spanish and English) of the questions and answers. The red button will remove the question so that it doesn’t appear again.</p>
+                        <p class="text-info">El botón verde cambia el lenguaje de las preguntas y respuestas (inglés y español). El botón rojo quita la pregunta para que no se vuelva a repetir.</p>
+                    </div>
+                    <button ng-click="started=true" ng-init="started=false" class="btn btn-lg btn-info center-block">START</button>
+                </section>
+                <div ng-include="'flashCard.html'" ng-show="started"></div>
+            </div>
+            <footer class="panel-footer navbar-fixed-bottom hidden-xs" ng-hide="started">
+                <p class="text-center small">&copy; Citizenship Flashcards. Hosted by <a href="http://tensignals.com">Ten Signals LLC</a></p>
+            </footer>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

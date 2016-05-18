@@ -1,0 +1,119 @@
+.question, .answers {
+    min-height: 400px;
+    margin: 0 auto;
+}
+
+.question {
+    background-color: aquamarine;
+}
+
+.answers {
+    background-color: khaki;
+}
+
+.text-question {
+    font-size: 60px;
+    padding: 5px;
+}
+
+.text-answer {
+    font-size: 40px;
+}
+
+@media (max-width: 300px) {
+    .text-question {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .text-answer {
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (min-width : 1224px) {
+    /*Desktop*/
+    .question, .answers {
+        min-height: 500px;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    /*iPad Landscape*/
+    .question, .answers {
+        min-height: 668px;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    /*iPad Portrait*/
+    .question, .answers {
+        min-height: 900px;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+    /*iPhone #5 Landscape*/
+    .question, .answers {
+        min-height: 220px;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+    /*iPhone #5 Portrait*/
+    .question, .answers {
+        min-height: 540px;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) {
+    /*iPhone #4 Landscape*/
+    .question, .answers {
+        min-height: 220px;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
+    /*iPhone #4 Portrait*/
+    .question, .answers {
+        min-height: 450px;
+    }
+}
+
+@media (max-width: 320px) {
+    .text-question {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .text-answer {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .text-question {
+        font-size: 30px;
+        padding: 0;
+    }
+
+    .text-answer {
+        font-size: 20px;
+    }
+
+    .btn-lg {
+        font-size: small;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .text-question {
+        font-size: 50px;
+        padding: 0;
+    }
+
+    .text-answer {
+        font-size: 30px;
+    }
+}
