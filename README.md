@@ -1,6 +1,8 @@
 # SouthToNorth
 http://southtonorth.com
 
+Website created in an effort to help those preparing for the US Citizenship test. It was created using Angular 1.x framework and Bootstrap for CSS styling. Questions and answers are in English and Spanish.
+
 ## US Citizenship Test Questions (English and Spanish)
 
 ## The 100 civics (history and government) questions and answers for the naturalization test are all included in this website. The civics test is an oral test and the USCIS Officer will ask the applicant up to 10 of the 100 civics questions.
