@@ -41,4 +41,9 @@ export class QuestionComponent implements OnInit {
     this.getQuestion(nextId);
   }
 
+  getPrevQuestion() {
+    var nextId = this.question.Id - 1;
+    this.getQuestion(nextId);
+  }
+
 }
