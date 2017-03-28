@@ -1,3 +1,9 @@
-<h1>Question Here</h1>
+<button md-raised-button>PREV</button>
+<button md-raised-button (click)="getNextQuestion()">NEXT</button>
+<button md-raised-button [mdMenuTriggerFor]="menu">LANGUAGE</button>
+<md-menu #menu="mdMenu">
+  <button md-menu-item>English</button>
+  <button md-menu-item>Spanish</button>
+</md-menu>
+<h3 *ngIf='question'>{{question.Question | uppercase}}</h3>
 <button md-raised-button color="primary" (click)="openDialog()">Show Answer</button>
-

@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { QuestionComponent } from './question/question.component';
 import { AnswerComponent } from './answer/answer.component';
+import {QuestionService} from '../assets/question.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { AnswerComponent } from './answer/answer.component';
     HttpModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [
+    QuestionService
+  ],
   bootstrap: [
     AppComponent,
     QuestionComponent,

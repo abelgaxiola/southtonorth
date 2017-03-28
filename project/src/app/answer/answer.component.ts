@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MdDialog} from '@angular/material';
+import { MdDialog, MdDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-answer',
@@ -7,8 +7,9 @@ import {MdDialog} from '@angular/material';
   styleUrls: ['./answer.component.css']
 })
 export class AnswerComponent implements OnInit {
+  public answers: string[];
 
-  constructor() { }
+  constructor(public dialogRef: MdDialogRef<AnswerComponent>) { }
 
   ngOnInit() {
   }
