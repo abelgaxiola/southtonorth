@@ -7,9 +7,11 @@
     <h3 *ngIf='question'>{{question.Question | uppercase}}</h3>
   </md-card-content>
   <img class="image-center" src="./assets/usa.jpg">
-  <md-card-actions align="center">
-    <button class="medium-button" md-raised-button (click)="getPrevQuestion()">PREV</button>
-    <button class="medium-button" md-raised-button color="primary" (click)="openDialog()">Answer</button>
-    <button class="medium-button" md-raised-button (click)="getNextQuestion()">NEXT</button>
-  </md-card-actions>
+  <div style="text-align: center ">
+    <md-card-actions align="center">
+      <button class="medium-button" md-raised-button (click)="getPrevQuestion()">PREV</button>
+      <button class="medium-button" md-raised-button color="primary" (click)="openDialog()">Answer</button>
+      <button class="medium-button" md-raised-button (click)="getNextQuestion()">NEXT</button>
+    </md-card-actions>
+  </div>
 </md-card>
