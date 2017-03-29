@@ -1,7 +1,69 @@
 @import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
 @import '~https://fonts.googleapis.com/icon?family=Material+Icons';
 @import '~https://fonts.googleapis.com/icon?family=Roboto';
-
 body {
- font-family: Roboto;
- }
+  font-family: Roboto;
+}
+
+.card {
+  width: 400px;
+  margin: 0 auto 20px;
+  box-sizing: border-box;
+}
+
+.card-content {
+  width: 300px;
+  height: 90px;
+}
+
+.image-center {
+  margin: 0 auto;
+  display: block;
+}
+
+@media all and (min-width: 0) and (max-width: 360px) and (orientation: portrait) {
+  .header {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+  .card {
+    width: 300px;
+    margin: 0 auto 20px;
+    box-sizing: border-box;
+  }
+  .card-content {
+    width: 250px;
+    height: 150px;
+  }
+  .image-center {
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+  .medium-button {
+    min-height: 23px !important;
+    min-width: 46px !important;
+    font-size: 10px !important;
+    line-height: 0px;
+  }
+}
+
+@media all and (min-width: 361px) and (orientation: portrait) {
+  .header {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+  .card {
+    width: 350px;
+    margin: 0 auto 20px;
+    box-sizing: border-box;
+  }
+  .card-content {
+    width: 300px;
+    height: 200px;
+  }
+}

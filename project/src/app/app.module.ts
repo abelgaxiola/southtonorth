@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
+import { HeaderComponent } from './header/header.component';
 import { QuestionComponent } from './question/question.component';
 import { AnswerComponent } from './answer/answer.component';
 import {QuestionService} from '../assets/question.service';
@@ -14,7 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
+    HeaderComponent,
     QuestionComponent,
     AnswerComponent,
     FooterComponent
