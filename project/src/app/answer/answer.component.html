@@ -1,6 +1,6 @@
 <div *ngIf="answers">
-  <button md-mini-fab color="primary" (click)="dialogRef.close()"><md-icon>check</md-icon></button>
   <ul *ngFor="let answer of answers">
     <li>{{answer | uppercase}}</li>
   </ul>
+  <button md-mini-fab color="primary" (click)="dialogRef.close()"><md-icon>check</md-icon></button>
 </div>

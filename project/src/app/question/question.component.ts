@@ -14,6 +14,7 @@ import { AnswerComponent } from "app/answer/answer.component";
 export class QuestionComponent implements OnInit {
   question: QandA;
   errorMessage: string;
+  englishQuestions: boolean;
 
   constructor(
     private questionService: QuestionService,
@@ -27,23 +28,39 @@ export class QuestionComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // Default to english questions
+    this.englishQuestions = true;
     this.getQuestion(1);
   }
 
   getQuestion(id: number) {
-    this.questionService.getQuestion(id).subscribe(
+    this.questionService.getQuestion(id, this.englishQuestions).subscribe(
       question => this.question = question,
       error => this.errorMessage = <any>error);
   }
 
   getNextQuestion() {
     var nextId = this.question.Id + 1;
+    if (nextId === 101)
+      nextId = 1;
     this.getQuestion(nextId);
   }
 
   getPrevQuestion() {
-    var nextId = this.question.Id - 1;
-    this.getQuestion(nextId);
+    var prevId = this.question.Id - 1;
+    if (prevId === 0)
+      prevId = 100;
+    this.getQuestion(prevId);
+  }
+
+  setSpanishQuestions() {
+    this.englishQuestions = false;
+    this.getQuestion(this.question.Id);
+  }
+
+  setEnglishQuestions() {
+    this.englishQuestions = true;
+    this.getQuestion(this.question.Id);
   }
 
 }

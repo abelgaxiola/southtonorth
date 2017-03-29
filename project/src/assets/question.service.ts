@@ -11,19 +11,24 @@ import { QandA } from 'assets/q-and-a';
 
 @Injectable()
 export class QuestionService {
-  //ToDo: Implement option for Spanish questions
   private englishQuestionsUrl = 'assets/english-questions.json';
+  private spanishQuestionsUrl = 'assets/spanish-questions.json';
+  private englishQuestions: boolean;
 
   constructor(private http: Http) { }
-  // Not used at this time but leaving here for later implementation
+
   getQuestions(): Observable<QandA[]> {
-    return this.http.get(this.englishQuestionsUrl)
+    var url = this.englishQuestions ? this.englishQuestionsUrl : this.spanishQuestionsUrl;
+
+    return this.http.get(url)
       .map((response: Response) => <QandA[]>response.json())
       .do(data => console.log('All: ' + JSON.stringify(data)))
       .catch(this.handleError);
   }
 
-  getQuestion(id: number): Observable<QandA> {
+  getQuestion(id: number, englishQuestions: boolean): Observable<QandA> {
+    this.englishQuestions = englishQuestions;
+
     return this.getQuestions()
       .map((questions: QandA[]) => questions.find(p => p.Id === id));
   }

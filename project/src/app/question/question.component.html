@@ -1,18 +1,15 @@
-  <md-card class="card">
-    <md-card-header>
-      <button disabled md-raised-button [mdMenuTriggerFor]="menu">LANGUAGE</button>
-      <md-menu #menu="mdMenu">
-        <button md-menu-item>English</button>
-        <button md-menu-item>Spanish</button>
-      </md-menu>
-    </md-card-header>
-    <md-card-content class="card-content">
-      <h3 *ngIf='question'>{{question.Question | uppercase}}</h3>
-    </md-card-content>
-    <img md-card-image src="./assets/america.png">
-    <md-card-actions align="center">
-      <button md-raised-button (click)="getPrevQuestion()">PREV</button>
-      <button md-raised-button color="primary" (click)="openDialog()">Answer</button>
-      <button md-raised-button (click)="getNextQuestion()">NEXT</button>
-    </md-card-actions>
-  </md-card>
+<md-card class="card">
+  <md-card-header color="primary">
+    <button color="primary" md-button (click)="setEnglishQuestions()">English</button>
+    <button color="primary" md-button (click)="setSpanishQuestions()">Spanish</button>
+  </md-card-header>
+  <md-card-content class="card-content">
+    <h3 *ngIf='question'>{{question.Question | uppercase}}</h3>
+  </md-card-content>
+  <img class="image-center" src="./assets/usa.jpg">
+  <md-card-actions align="center">
+    <button md-raised-button (click)="getPrevQuestion()">PREV</button>
+    <button md-raised-button color="primary" (click)="openDialog()">Answer</button>
+    <button md-raised-button (click)="getNextQuestion()">NEXT</button>
+  </md-card-actions>
+</md-card>

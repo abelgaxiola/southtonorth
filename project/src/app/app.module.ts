@@ -9,13 +9,15 @@ import { MenuComponent } from './menu/menu.component';
 import { QuestionComponent } from './question/question.component';
 import { AnswerComponent } from './answer/answer.component';
 import {QuestionService} from '../assets/question.service';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     QuestionComponent,
-    AnswerComponent
+    AnswerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
