@@ -6,8 +6,8 @@
   <md-card-content class="card-content">
     <h3 *ngIf='question'>{{question.Question | uppercase}}</h3>
   </md-card-content>
-  <img class="image-center" src="./assets/usa.jpg">
-  <div style="text-align: center ">
+  <img class="center-block" src="./assets/usa.jpg">
+  <div class="center-text">
     <md-card-actions align="center">
       <button class="medium-button" md-raised-button (click)="getPrevQuestion()">PREV</button>
       <button class="medium-button" md-raised-button color="primary" (click)="openDialog()">Answer</button>

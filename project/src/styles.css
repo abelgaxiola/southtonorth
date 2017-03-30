@@ -3,6 +3,7 @@
 @import '~https://fonts.googleapis.com/icon?family=Roboto';
 body {
   font-family: Roboto;
+  height: 100%;
 }
 
 .card {
@@ -16,9 +17,20 @@ body {
   height: 90px;
 }
 
-.image-center {
+.center-block {
   margin: 0 auto;
   display: block;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 @media all and (min-width: 0) and (max-width: 360px) and (orientation: portrait) {
